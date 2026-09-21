@@ -229,36 +229,85 @@
 
 //====================================
 
-let name = prompt("Product name?");
-let price = +prompt("Product price?");
-let count = +prompt("Product count?");
-let card = confirm("Got a discount card?");
-let delivery = prompt("Delivery option (courier, post, pickup)?");
+// let name = prompt("Product name?");
+// let price = +prompt("Product price?");
+// let count = +prompt("Product count?");
+// let card = confirm("Got a discount card?");
+// let delivery = prompt("Delivery option (courier, post, pickup)?");
+//
+// let totalPrice = price*count;
+// //<2000 -> 0%
+// //>2000 -> 5%
+// //>5000 -> 10%
+// //>10000 -> 15%
+// let shopDiscount = 0;
+// if(totalPrice >= 10000){
+//     shopDiscount = 15;
+// }
+// else if(totalPrice >= 5000){
+//     shopDiscount = 10;
+// }
+// else if(totalPrice >= 2000){
+//     shopDiscount = 5;
+// }
+// if(card){
+//     shopDiscount += 10;
+// }
+// let deliveryCost = 0;
+// switch(delivery){
+//     case "courier":
+//         deliveryCost = 200;
+//         case
+// }
+// totalPrice = totalPrice/100*(100-shopDiscount);
+//
+// console.log(`Total price: ${totalPrice}`);
 
-let totalPrice = price*count;
-//<2000 -> 0%
-//>2000 -> 5%
-//>5000 -> 10%
-//>10000 -> 15%
-let shopDiscount = 0;
-if(totalPrice >= 10000){
-    shopDiscount = 15;
-}
-else if(totalPrice >= 5000){
-    shopDiscount = 10;
-}
-else if(totalPrice >= 2000){
-    shopDiscount = 5;
-}
-if(card){
-    shopDiscount += 10;
-}
-let deliveryCost = 0;
-switch(delivery){
-    case "courier":
-        deliveryCost = 200;
-        case
-}
-totalPrice = totalPrice/100*(100-shopDiscount);
+//========================= lesson 4 ============================================
 
-console.log(`Total price: ${totalPrice}`);
+// for (let i = 10; i >= 1; i--) {
+//     console.log(`Number №${11-i} = ${i}`)
+// }
+
+// sum = 0;
+// for (let i = 0; i <= 100; i++){
+//     sum += i;
+// }
+// console.log(sum);
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i > 20 && i % 3 === 0 && i % 6 === 0) {
+//         console.log(i)
+//         break;
+//     }
+// }
+
+// for (let i = 0; i <= 100; i++) {
+//     if(i % 5 === 0) {
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+let n = +prompt("Number of students?: ");
+let a = 0, sum = 0; high = 0; medium = 0; low = 0; min = 0; max = 0;
+for (i = 0; i <= n-1;) {
+    a = +prompt("Grade?: ");
+    if (a <= 12 && a >= 1){
+        if (a >= 10) { high++ }
+        if (a >= 6) { medium++ }
+        else { low++ }
+
+        if (a < min) { min = a }
+        if (a > max) { max = a }
+
+        sum += a;
+        a = 0;
+        i++
+    }
+    else{
+        alert("Invalid grade!")
+        continue;
+    }
+}
+console.log(`The average grade is ${sum/n} with ${high} high-level marks, ${medium} medium-level marks, and ${low} low-level marks, and the lowest mark being ${min} and the highest one being ${max}.`);
