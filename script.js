@@ -313,26 +313,134 @@
 
 //==========================Homework===============================
 
-let n = +prompt("Number of participants?: ");
-let a = 0, sum = 0; high = 0; medium = 0; low = 0; min = 100; max = 0; numOne = 0;
-for (i = 1; i <= n;) {
-    a = +prompt("Their result?: ");
-    if (a <= 100 && a >= 0){
-        if (a >= 90) { high++ }
-        if (a >= 60) { medium++ }
-        else { low++ }
+// let n = +prompt("Number of participants?: ");
+// let a = 0, sum = 0; high = 0; medium = 0; low = 0; min = 100; max = 0; numOne = 0;
+// for (i = 1; i <= n;) {
+//     a = +prompt("Their result?: ");
+//     if (a <= 100 && a >= 0){
+//         if (a >= 90) { high++ }
+//         if (a >= 60) { medium++ }
+//         else { low++ }
+//
+//         if (a < min) { min = a }
+//         if (a > max) { max = a }
+//
+//         if (a == 100) { numOne = i; }
+//
+//         sum += a;
+//         a = 0;
+//         i++
+//     }
+//     else{
+//         alert("Invalid result!")
+//     }
+// }
+// console.log(`The average result is ${sum/n} with ${high} high-level (90-100) score(s), ${medium} medium-level (60-89) score(s), and ${low} low-level (<60) score(s), the lowest score being ${min} and the highest one being ${max}; the first participant to get a score of 100 is participant №${numOne}.`);
 
-        if (a < min) { min = a }
-        if (a > max) { max = a }
+//=====================================Lesson 5=================================
 
-        if (a == 100) { numOne = i; }
+// let i = 1;
+// while (i <= 5) {
+//     console.log(i);
+//     i++
+// }
 
-        sum += a;
-        a = 0;
-        i++
-    }
-    else{
-        alert("Invalid result!")
-    }
+// let age = +prompt('Enter your age');
+// while (Number.isNan(age) || age <= 0 || age > 120) {
+//     alert('Please enter a number');
+//     age = +prompt('Enter your age correctly');
+// }
+// console.log(age);
+
+// const correctPin = 1111;
+// // let pin = +prompt("Enter a valid pin");
+// let tries = 1;
+// //
+// // while (pin !== correctPin && tries <= 3 ) {
+// //     pin = +prompt("Wrong pin. Enter a valid pin");
+// //     tries++;
+// // }
+// // if (pin === correctPin) {
+// //     alert("CORRET PIN!!! YAAAAAA UWUWUWUWUWUWUW!!!")
+// // }
+// // else{
+// //     alert("wrong pin... i'm coming for you")
+// // }
+// while (tries <= 3){
+//     let pin = +prompt('Enter pin');
+//     if (pin === correctPin){
+//         alert("Yes! You have succeeded!! Finally, you will have access to your bank account!")
+//         break;
+//     }
+//     tries++;
+//     alert("Be careful, user.. Thy number you have entered doethn't match thein real pin..")
+// }
+
+// let menuChoice;
+// do{
+//     menuChoice = +prompt("Choose action:\n" +
+//         "1 - Open profile\n" +
+//         "2 - Open profule settings\n" +
+//         "0 - Open the exit door\n")
+//     if(menuChoice === 1){
+//         alert("Opening profile")
+//     }
+//     else if(menuChoice === 2){
+//         alert("Opening profule settings")
+//     }
+//     else if(menuChoice === 0){
+//         alert("Trying to open the exit door")
+//     }
+//     else{
+//         alert("Unknown command")
+//     }
+// }while(menuChoice !== 0)
+
+// let gradeSum = 0;
+// let count = 0;
+// while(count < 5){
+//     let num;
+//     num = +prompt("Enter the grade")
+//     if (Number.isNan(num) || num <= 0 || num > 12){
+//         alert("Invalid grade")
+//         continue
+//     }
+//     gradeSum += num;
+//     count++;
+// }
+// alert(`Average grade is ${gradeSum/5}`);
+// // :DDDDD
+
+//======================== h o m e w o r k ==================================== = = = = = = =  =   =     =        =
+
+let correctPin = 4321;
+let age;
+while(true){
+    age = +prompt("Enter your age");
+    if(age >= 12 && age <= 90){ break }
+    alert("Invalid age")
 }
-console.log(`The average result is ${sum/n} with ${high} high-level (90-100) score(s), ${medium} medium-level (60-89) score(s), and ${low} low-level (<60) score(s), the lowest score being ${min} and the highest one being ${max}; the first participant to get a score of 100 is participant №${numOne}.`);
+let i = 0;
+while(i < 3){
+    let pin = +prompt("Enter pin");
+    if(pin == 4321){
+        let action;
+        do{
+            action = prompt("Choose action:\n" +
+                "1 - Open personal cabinet\n" +
+                "2 - Open messages\n" +
+                "3 - Open settings\n" +
+                "0 - Open the exit door\n");
+            switch(action){
+                case 0: break;
+                case 1: alert("Opening personal cabinet");
+                case 2: alert("Opening messages");
+                case 3: alert("Opening settings");
+                default: alert("Invalid action");
+            }
+        }while(true)
+        break;
+    }
+    alert("Invalid pin")
+    i++
+}
