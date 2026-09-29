@@ -413,34 +413,38 @@
 
 //======================== h o m e w o r k ==================================== = = = = = = =  =   =     =        =
 
-let correctPin = 4321;
-let age;
-while(true){
-    age = +prompt("Enter your age");
-    if(age >= 12 && age <= 90){ break }
-    alert("Invalid age")
-}
-let i = 0;
-while(i < 3){
-    let pin = +prompt("Enter pin");
-    if(pin == 4321){
-        let action;
-        do{
-            action = prompt("Choose action:\n" +
-                "1 - Open personal cabinet\n" +
-                "2 - Open messages\n" +
-                "3 - Open settings\n" +
-                "0 - Open the exit door\n");
-            switch(action){
-                case 0: break;
-                case 1: alert("Opening personal cabinet");
-                case 2: alert("Opening messages");
-                case 3: alert("Opening settings");
-                default: alert("Invalid action");
-            }
-        }while(true)
-        break;
-    }
-    alert("Invalid pin")
-    i++
-}
+// let correctPin = 4321;
+// let age;
+// while(true){
+//     age = +prompt("Enter your age");
+//     if(age >= 12 && age <= 90){ break }
+//     alert("Invalid age")
+// }
+// let i = 0;
+// while(i < 3){
+//     let pin = +prompt("Enter pin");
+//     if(pin == 4321){
+//         let action;
+//         do{
+//             action = prompt("Choose action:\n" +
+//                 "1 - Open personal cabinet\n" +
+//                 "2 - Open messages\n" +
+//                 "3 - Open settings\n" +
+//                 "0 - Open the exit door\n");
+//             switch(action){
+//                 case 0: break;
+//                 case 1: alert("Opening personal cabinet");
+//                 case 2: alert("Opening messages");
+//                 case 3: alert("Opening settings");
+//                 default: alert("Invalid action");
+//             }
+//         }while(true)
+//         break;
+//     }
+//     alert("Invalid pin")
+//     i++
+// }
+
+//================= p r a k t y c h n a ==================================== = = = = = = =  =   =     =        =
+
+// in another file ;)
