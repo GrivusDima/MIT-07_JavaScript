@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+    <div class="header">
+        <h1>Клуб подій</h1>
+        <p class="subtitle">Керуйте заявками на участь у шкільних активностях</p>
+    </div>
+    <div class="content">
+        <div class="form-card">
+            <h2>Нова заявка</h2>
+            <label for="nameInput">Ім'я учасника</label>
+            <input id="nameInput" type="text" placeholder="ХхХ_ГДЗешнік228_ХхХ">
+
+            <label for="eventInput">Назва події</label>
+            <input id="eventInput" type="text" placeholder="Граєм в GTA6">
+
+            <p id="errorText" class="error hidden">Заповніть обидва поля!</p>
+
+            <button id="addBtn" type="button">+ Додати заявку</button>
+        </div>
+        <div class="list-card">
+            <h2>Учасники</h2>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span>Усього заявок</span>
+                    <strong id="totalCounter">0</strong>
+                </div>
+                <div class="stat-box">
+                    <span>Підтверджено</span>
+                    <strong id="confirmedCounter">0</strong>
+                </div>
+            </div>
+
+            <p id="emptyText" class="empty-msg">Заявок поки немає</p>
+            <ul id="requestList"></ul>
+
+            <button id="clearBtn" class="clear-btn" type="button">Очистити всі заявки</button>
+        </div>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
